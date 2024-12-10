@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       03eb352b-9c17-4379-b0f6-e89b7a3113c5
+:END:
+#+title: Generative level design
+#+alias: [ "Design" "Unreal Engine""Levels" ]
+#+filetags: :design:levels:unrealengine:ai:
+[[id:3835fc78-3cf3-409e-8046-f89b7aba2fee][AI in UE]]

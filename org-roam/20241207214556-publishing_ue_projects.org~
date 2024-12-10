@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       13466f3b-fb87-4aff-8e9b-7b2827672d52
+:END:
+#+title: Publishing UE projects
+#+alias: [ "Unrealengine" "Publishing" ]
+#+filetags: :unrealengine:publishing:
+- Packaging and Deployment
+    - Target Platforms
+    - Distribution Channels
+    - Updating and Patching

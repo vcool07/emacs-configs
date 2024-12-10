@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       aff4b4f6-bb08-4640-9dcf-412f62390cf7
+:END:
+#+title: Unreal Engine Basics
+[[id:335c3a1f-5e1b-4afb-a123-4855f374db6a][Blueprint Scripting]]
+[[id:8fc7b911-b74f-42b7-b776-b7147dd92230][C++]]
+[[id:af4e6dc7-41fb-43c4-a8fc-725de5a6a69c][Level Design]]
+[[id:3835fc78-3cf3-409e-8046-f89b7aba2fee][AI in UE]]
+[[id:9bbbc815-a964-4bea-9965-69ee2895fabe][Gameplay Mechanics]]
+[[id:a30f58d5-6c06-4c03-8377-ece4c1768f61][Materials and Shaders]]
+[[id:3330a456-5707-466a-8568-95e9c81249bd][Animation]]
+[[id:1b990638-fb69-4e4c-8d10-7dbbbf6da67e][UI Development]]
+[[id:d456e1db-ec5f-46c1-9ca6-c8607b9d2860][Audio Implementation]]
+[[id:c6f776c7-1768-4cab-b4f7-b082f9a20065][Multiplayer and Networking]]
+[[id:a306e82d-5dc8-4f20-8aaa-6a695bd20b4e][Optimization and Debugging]]
+[[id:13466f3b-fb87-4aff-8e9b-7b2827672d52][Publishing UE projects]]
+testing

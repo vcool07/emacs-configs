@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       3330a456-5707-466a-8568-95e9c81249bd
+:END:
+#+title: Animation
+#+alias: [ "Unrealengine" "Animation" ]
+#+filetags: :unrealengine:animation:
+- Importing Animation Assets
+- Animation Blueprints
+- Skeletal Meshes
+- Blend Spaces and State Machines

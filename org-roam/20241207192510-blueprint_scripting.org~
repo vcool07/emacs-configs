@@ -1,0 +1,264 @@
+:PROPERTIES:
+:ID:       335c3a1f-5e1b-4afb-a123-4855f374db6a
+:END:
+#+title: Blueprint Scripting
+#+alias: [ "Blueprints" "Visual Scripting" ]
+#+filetags: :unreal:blueprints:
+
+
+## 📌 What is Blueprint Scripting?
+
+Blueprints are Unreal Engine's visual scripting system that allows you to create gameplay elements without writing code.
+
+- Visual Scripting: Drag-and-drop interface to create logic.
+- Event-Driven: Reacts to events like player actions or collisions.
+- Extensible: Can interface with C++ code for advanced functionality.
+
+---
+
+## 🗂️ Types of Blueprints
+
+1. Level Blueprint
+   - Specific to a level.
+   - Used for level-wide events and interactions.
+
+2. Blueprint Classes
+   - Create new classes derived from existing ones.
+   - Reusable across multiple levels.
+
+3. Blueprint Function Libraries
+   - Collections of functions accessible throughout the project.
+
+---
+
+## 🧩 Blueprint Editor Overview
+
+### Main Panels
+
+- Toolbar
+  - Access common actions like Save, Compile, and Play.
+
+- Components Tab
+  - Manage components attached to the Blueprint (e.g., Meshes, Cameras).
+
+- My Blueprint Tab
+  - View and create variables, functions, macros, and event graphs.
+
+- Graph Panel
+  - The main area where you script logic using nodes.
+
+- Details Panel
+  - Displays properties of selected nodes or components.
+
+---
+
+## 🎛️ Working with Nodes
+
+### Node Types
+
+1. Event Nodes
+   - BeginPlay: Called when the game starts.
+   - Tick: Called every frame.
+   - Input Events: Respond to player inputs like key presses.
+
+2. Function Nodes
+   - Perform actions or calculations.
+   - Can be custom functions or built-in ones.
+
+3. Variable Nodes
+   - Hold data values.
+   - Types include Boolean, Integer, Float, String, Vector, etc.
+
+4. Flow Control Nodes
+   - Branch: If-Else logic.
+   - ForLoop, WhileLoop: Repetitive execution.
+
+---
+
+## 🔧 Creating Variables
+
+### Steps
+
+1. In My Blueprint Tab
+   - Click + Variable.
+   - Name your variable.
+
+2. Set Variable Type
+   - In the Details Panel, choose the type (e.g., Float).
+
+3. Set Default Value
+   - Assign an initial value in the Details Panel.
+
+### Usage
+
+- Get Variable: Drag the variable into the graph and select Get.
+- Set Variable: Drag the variable into the graph and select Set.
+
+---
+
+## 🔀 Using Functions
+
+### Creating a Function
+
+1. In My Blueprint Tab
+   - Click + Function.
+   - Name your function.
+
+2. Add Logic
+   - Design your function using nodes in the Graph Panel.
+
+### Calling Functions
+
+- Drag the function name into the Graph to create a Call Function node.
+
+---
+
+## 📝 Example: Creating a Door that Opens
+
+### Step 1: Create a Door Blueprint
+
+- Right-click in the Content Browser > Blueprint Class > Choose Actor > Name it BP_Door.
+
+### Step 2: Add Components
+
+- Static Mesh Component
+  - Add a mesh that represents the door.
+
+### Step 3: Setup Variables
+
+- IsOpen (Boolean): Tracks if the door is open.
+
+### Step 4: Implement Open Logic
+
+1. Event Graph
+
+   - Event BeginOverlap: Triggered when something overlaps the door's collision.
+
+   - Branch Node: Check if IsOpen is false.
+
+   - Set IsOpen: Set to true.
+
+   - Play Animation: Use a Timeline or Lerp to rotate the door open.
+
+2. Event EndOverlap
+
+   - Similar logic to close the door.
+
+---
+
+## 🕹️ Handling Input
+
+### Enable Input
+
+- In your Blueprint, use Enable Input node connected to Event BeginPlay.
+
+### Input Events
+
+1. Project Settings
+   - Go to Edit > Project Settings > Input.
+   - Under Action Mappings, add new input actions (e.g., "Jump").
+
+2. Using Input in Blueprint
+   - Right-click in the Graph > Search for your input action (e.g., "Jump").
+   - Connect it to your logic.
+
+---
+
+## 🌐 Communication Between Blueprints
+
+###Direct Communication
+
+- Get a reference to another Blueprint and call functions or access variables.
+
+### Blueprint Interfaces
+
+1. Create Interface
+   - Right-click in Content Browser > Blueprint Interface.
+
+2. Define Functions
+   - Add functions without implementation.
+
+3. Implement Interface
+   - In your Blueprint, go to Class Settings > Implemented Interfaces > Add your interface.
+
+4. Calling Interface Functions
+   - Use Message nodes to invoke interface functions on other Blueprints.
+
+### Event Dispatchers
+
+- Allow a Blueprint to send out an event that others can bind to and respond.
+
+---
+
+## 🎚️ Using Timelines
+
+### Purpose
+
+- Animate properties over time (e.g., move an object smoothly).
+
+### Creating a Timeline
+
+1. Add Timeline
+   - In the Graph, right-click > Add Timeline.
+
+2. Edit Timeline
+   - Double-click the node to open the Timeline Editor.
+   - Add a Float Track or Vector Track.
+
+3. Implement Logic
+   - Use output values to drive properties (e.g., position, rotation).
+
+---
+
+## 💡 Best Practices
+
+- Comment Your Nodes
+  - Use comments to explain logic blocks.
+
+- Group Related Nodes
+  - Use Sequences and Macros to organize.
+
+- Optimize Event Tick
+  - Avoid heavy computations in Tick.
+
+- Reuse Logic
+  - Create Functions and Macros for repeated logic.
+
+---
+
+## 🛎️ Debugging Tips
+
+- Print String
+  - Useful for displaying variable values during runtime.
+
+- Breakpoints
+  - Right-click on a node > Add Breakpoint to pause execution.
+
+- Watch Variables
+  - Right-click on a variable > Watch This Value.
+
+---
+
+## 📚 Additional Learning Resources
+
+- Unreal Engine Official Docs
+  - [Blueprint Visual Scripting](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/Blueprints/)
+
+- Tutorial Videos
+  - Unreal Engine's official YouTube channel.
+
+- Community Forums
+  - Engage with other developers for tips and help.
+
+---
+
+## 🚀 Next Steps
+
+- Experiment
+  - Try modifying existing Blueprints or create new ones.
+
+- Practice
+  - Build small projects to reinforce concepts.
+
+- Explore
+  - Look into more advanced topics like AI, Multiplayer, and Optimization.
